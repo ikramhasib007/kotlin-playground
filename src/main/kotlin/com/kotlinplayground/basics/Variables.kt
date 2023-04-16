@@ -2,12 +2,16 @@ package com.kotlinplayground.basics
 
 fun main() {
     // immutable
-    val name: String = "Ikram"
+    val name = "Ikram"
     println(name)
 
     // mutable
-    var age: Int = 34
+    var age = 34
     println(age)
     age = 35
     println(age)
+
+    val course = "Kotlin sprint"
+    // String interpolation or string template techniques
+    println("Course: $course and the course length is ${course.length}")
 }
