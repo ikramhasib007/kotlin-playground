@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f30a30e-4002-45e9-b1aa-46ddc62fd1f8" name="Changes" comment="variables basics">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/basics/Variables.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/basics/Variables.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +50,7 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager" selected="Kotlin.HelloKotlinKt">
+  <component name="RunManager" selected="Kotlin.VariablesKt">
     <configuration name="HelloKotlinFileKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.HelloKotlinFileKt" />
       <module name="kotlin-playground.main" />
@@ -73,8 +74,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.HelloKotlinKt" />
         <item itemvalue="Kotlin.VariablesKt" />
+        <item itemvalue="Kotlin.HelloKotlinKt" />
         <item itemvalue="Kotlin.HelloKotlinFileKt" />
       </list>
     </recent_temporary>
