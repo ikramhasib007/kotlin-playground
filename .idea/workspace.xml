@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f30a30e-4002-45e9-b1aa-46ddc62fd1f8" name="Changes" comment="variables basics">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/basics/LabelAndReturn.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/basics/LoopsAndRanges.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/basics/LoopsAndRanges.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager" selected="Kotlin.LoopsAndRangesKt">
+  <component name="RunManager" selected="Kotlin.LabelAndReturnKt">
     <configuration name="ConditionsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.basics.ConditionsKt" />
       <module name="kotlin-playground.main" />
@@ -58,15 +58,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloKotlinFileKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.HelloKotlinFileKt" />
+    <configuration name="HelloKotlinKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.HelloKotlinKt" />
       <module name="kotlin-playground.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloKotlinKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.HelloKotlinKt" />
+    <configuration name="LabelAndReturnKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.basics.LabelAndReturnKt" />
       <module name="kotlin-playground.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -88,11 +88,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.LabelAndReturnKt" />
         <item itemvalue="Kotlin.LoopsAndRangesKt" />
         <item itemvalue="Kotlin.ConditionsKt" />
         <item itemvalue="Kotlin.VariablesKt" />
         <item itemvalue="Kotlin.HelloKotlinKt" />
-        <item itemvalue="Kotlin.HelloKotlinFileKt" />
       </list>
     </recent_temporary>
   </component>
