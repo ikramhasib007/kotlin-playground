@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f30a30e-4002-45e9-b1aa-46ddc62fd1f8" name="Changes" comment="variables basics">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/functions/TopLevel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/functions/functions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/functions/functions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/basics/Variables.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/basics/Variables.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +51,7 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager" selected="Kotlin.FunctionsKt">
-    <configuration name="ConditionsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.basics.ConditionsKt" />
-      <module name="kotlin-playground.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.VariablesKt">
     <configuration name="FunctionsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.functions.FunctionsKt" />
       <module name="kotlin-playground.main" />
@@ -79,6 +73,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TopLevelKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.functions.TopLevelKt" />
+      <module name="kotlin-playground.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VariablesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.basics.VariablesKt" />
       <module name="kotlin-playground.main" />
@@ -88,11 +89,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.VariablesKt" />
+        <item itemvalue="Kotlin.TopLevelKt" />
         <item itemvalue="Kotlin.FunctionsKt" />
         <item itemvalue="Kotlin.LabelAndReturnKt" />
         <item itemvalue="Kotlin.LoopsAndRangesKt" />
-        <item itemvalue="Kotlin.ConditionsKt" />
-        <item itemvalue="Kotlin.VariablesKt" />
       </list>
     </recent_temporary>
   </component>

@@ -1,5 +1,8 @@
 package com.kotlinplayground.basics
 
+import com.kotlinplayground.functions.courseName
+import com.kotlinplayground.functions.topLevelFunction
+
 fun main() {
     // immutable
     val name = "Ikram"
@@ -23,4 +26,8 @@ fun main() {
         DEF
     """.trimIndent()
     println(multiline1)
+
+    val ran = topLevelFunction()
+    println("Num is $ran")
+    println(courseName)
 }
