@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f30a30e-4002-45e9-b1aa-46ddc62fd1f8" name="Changes" comment="variables basics">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/functions/TopLevel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Person.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/basics/Variables.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/basics/Variables.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -51,7 +50,7 @@
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager" selected="Kotlin.VariablesKt">
+  <component name="RunManager" selected="Kotlin.PersonKt">
     <configuration name="FunctionsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.functions.FunctionsKt" />
       <module name="kotlin-playground.main" />
@@ -66,8 +65,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoopsAndRangesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.basics.LoopsAndRangesKt" />
+    <configuration name="PersonKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.classes.PersonKt" />
       <module name="kotlin-playground.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,11 +88,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.PersonKt" />
         <item itemvalue="Kotlin.VariablesKt" />
         <item itemvalue="Kotlin.TopLevelKt" />
         <item itemvalue="Kotlin.FunctionsKt" />
         <item itemvalue="Kotlin.LabelAndReturnKt" />
-        <item itemvalue="Kotlin.LoopsAndRangesKt" />
       </list>
     </recent_temporary>
   </component>
