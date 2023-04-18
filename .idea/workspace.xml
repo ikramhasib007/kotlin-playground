@@ -42,13 +42,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/rootnext8/Projects/kotlin/kotlin-playground",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager" selected="Kotlin.VariablesKt">
+  <component name="RunManager" selected="Kotlin.HelloKotlinKt">
     <configuration name="HelloKotlinFileKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.HelloKotlinFileKt" />
       <module name="kotlin-playground.main" />
@@ -72,9 +73,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.HelloKotlinKt" />
         <item itemvalue="Kotlin.VariablesKt" />
         <item itemvalue="Kotlin.HelloKotlinFileKt" />
-        <item itemvalue="Kotlin.HelloKotlinKt" />
       </list>
     </recent_temporary>
   </component>
