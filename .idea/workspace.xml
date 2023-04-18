@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f30a30e-4002-45e9-b1aa-46ddc62fd1f8" name="Changes" comment="variables basics">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Item.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Person.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Person.kt" afterDir="false" />
     </list>
@@ -120,20 +119,5 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="variables basics" />
     <option name="LAST_COMMIT_MESSAGE" value="variables basics" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Person.kt</url>
-          <line>15</line>
-          <properties method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

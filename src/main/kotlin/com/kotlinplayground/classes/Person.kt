@@ -5,6 +5,11 @@ class Person(
     val age: Int = 0
 ) {
   var email: String = ""
+  var nameLength: Int = 0
+  init {
+    println("Inside init block")
+    nameLength = name.length
+  }
   constructor(_email: String, _name: String = "", _age: Int = 0): this (_name, _age) {
     email = _email
   }
@@ -14,16 +19,16 @@ class Person(
 }
 
 fun main() {
-  val person = Person("Ikram", 34) // No need use 'new' keyword for instantiate a class
-    person.action()
-    println("Person name is ${person.name}")
-    println("Person age is ${person.age}")
-
-    val person1 = Person()
-    println("Person name is ${person1.name}")
-    println("Person age is ${person1.age}")
+//  val person = Person("Ikram", 34) // No need use 'new' keyword for instantiate a class
+//    person.action()
+//    println("Person name is ${person.name}")
+//    println("Person age is ${person.age}")
+//
+//    val person1 = Person()
+//    println("Person name is ${person1.name}")
+//    println("Person age is ${person1.age}")
 
     val person2 = Person(_email = "ikramhasib007@gmail.com", _name = "Ikram", _age = 34)
-    println("Person name is ${person2.name} & age is ${person2.age} & email is ${person2.email}")
+    println("Person name is ${person2.name} & age is ${person2.age} & email is ${person2.email} & the nameLength is ${person2.nameLength}")
 
 }
