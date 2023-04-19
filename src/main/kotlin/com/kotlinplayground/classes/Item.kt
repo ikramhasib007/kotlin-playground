@@ -10,4 +10,6 @@ class Item {
 fun main() {
   val item = Item("iPhone")
     println("Item name is ${item.name}")
+    println("Item name is $item")
+
 }
