@@ -3,6 +3,7 @@ package com.kotlinplayground.interfaces
 import com.kotlinplayground.classes.Course
 
 interface CourseRepository {
+    val isCoursePersisted: Boolean
     fun getById(id: Int): Course
     fun save(course: Course): Int {
         println("Save the course: $course")
@@ -15,8 +16,14 @@ interface Repository {
 }
 
 class SqlCourseRepository : CourseRepository, Repository {
+    override var isCoursePersisted: Boolean = false
     override fun getById(id: Int): Course {
         return Course(id, "Reactive programming in Modern Java using project reactor", "Ikram")
+    }
+
+    override fun save(course: Course): Int {
+        isCoursePersisted = true
+        return super.save(course)
     }
 
     override fun getAll(): Unit {
@@ -25,12 +32,15 @@ class SqlCourseRepository : CourseRepository, Repository {
 }
 
 class NoSqlCourseRepository : CourseRepository {
+    override var isCoursePersisted: Boolean = false
+
     override fun getById(id: Int): Course {
         return Course(id, "Reactive programming in Modern Java using project reactor", "Ikram")
     }
 
     override fun save(course: Course): Int {
         println("[NoSqlCourseRepository] Save the course: $course")
+        isCoursePersisted = true
         return course.id
     }
 }
@@ -63,6 +73,7 @@ fun main() {
     println("Course is: ${noSqlCourseRepository.getById(1)}")
     val courseId = noSqlCourseRepository.save(Course(2, "Reactive programming in Modern Java using project reactor", "Ikram"))
     println("courseId is $courseId")
+    println("noSqlCourseRepository: ${noSqlCourseRepository.isCoursePersisted}")
 
     val ab = AB()
     println("${ab.doSomething()}")
