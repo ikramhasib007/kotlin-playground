@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f30a30e-4002-45e9-b1aa-46ddc62fd1f8" name="Changes" comment="variables basics">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Course.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Employee.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ktfmt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ktfmt.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Item.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Item.kt" afterDir="false" />
     </list>
@@ -53,7 +50,7 @@
     "settings.editor.selected.configurable": "com.facebook.ktfmt_idea_plugin.settings"
   }
 }]]></component>
-  <component name="RunManager" selected="Kotlin.EmployeeKt">
+  <component name="RunManager" selected="Kotlin.ItemKt">
     <configuration name="CourseKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.classes.CourseKt" />
       <module name="kotlin-playground.main" />
@@ -91,9 +88,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.ItemKt" />
         <item itemvalue="Kotlin.EmployeeKt" />
         <item itemvalue="Kotlin.CourseKt" />
-        <item itemvalue="Kotlin.ItemKt" />
         <item itemvalue="Kotlin.PersonKt" />
         <item itemvalue="Kotlin.VariablesKt" />
       </list>
