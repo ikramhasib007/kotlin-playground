@@ -1,21 +1,30 @@
 package com.kotlinplayground.classes
 
 open class User(val name: String) {
-    fun login() {
-        println("Inside the User class")
+    open var isLoggedIn : Boolean = false
+    open fun login() {
+        println("Inside User class")
     }
 }
 
-class Student(name: String) : User(name)
+class Student(name: String) : User(name) {
+    override var isLoggedIn : Boolean = false
+    override fun login() {
+        println("Inside Student class")
+        super.login()
+    }
+}
 
 class Instructor(name: String) : User(name)
 
 fun main() {
     val student = Student("Ikram")
     student.login()
-    println("Name is ${student.name}")
+    student.isLoggedIn = true
+    println("Student name is ${student.name}")
+    println("Student isLoggedIn value is: ${student.isLoggedIn}")
 
     val instructor = Instructor("John")
     instructor.login()
-    println("Name is ${instructor.name}")
+    println("Instructor name is ${instructor.name}")
 }
