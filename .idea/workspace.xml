@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8f30a30e-4002-45e9-b1aa-46ddc62fd1f8" name="Changes" comment="variables basics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/cast/ExploreCast.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/cast/ExploreCast.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/nulls/ExploreNulls.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/nulls/ExploreNulls.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +68,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.ExploreCastKt">
+  <component name="RunManager" selected="Kotlin.ExploreNullsKt">
     <configuration name="CourseKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.classes.CourseKt" />
       <module name="kotlin-playground.main" />
@@ -107,8 +106,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.ExploreCastKt" />
         <item itemvalue="Kotlin.ExploreNullsKt" />
+        <item itemvalue="Kotlin.ExploreCastKt" />
         <item itemvalue="Kotlin.CourseKt" />
         <item itemvalue="Kotlin.InheritanceKt" />
         <item itemvalue="Kotlin.InterfacesKt" />
