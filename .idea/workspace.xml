@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f30a30e-4002-45e9-b1aa-46ddc62fd1f8" name="Changes" comment="variables basics">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/cast/ExploreCast.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Course.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/classes/Course.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,9 +51,16 @@
     "settings.editor.selected.configurable": "com.facebook.ktfmt_idea_plugin.settings"
   }
 }]]></component>
-  <component name="RunManager" selected="Kotlin.ExploreCastKt">
+  <component name="RunManager" selected="Kotlin.CourseKt">
     <configuration name="AuthenticateKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.classes.AuthenticateKt" />
+      <module name="kotlin-playground.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.classes.CourseKt" />
       <module name="kotlin-playground.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,20 +87,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ItemKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.classes.ItemKt" />
-      <module name="kotlin-playground.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.CourseKt" />
         <item itemvalue="Kotlin.ExploreCastKt" />
         <item itemvalue="Kotlin.InheritanceKt" />
         <item itemvalue="Kotlin.InterfacesKt" />
         <item itemvalue="Kotlin.AuthenticateKt" />
-        <item itemvalue="Kotlin.ItemKt" />
       </list>
     </recent_temporary>
   </component>
