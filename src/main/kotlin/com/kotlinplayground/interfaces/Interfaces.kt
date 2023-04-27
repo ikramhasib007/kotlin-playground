@@ -15,6 +15,7 @@ interface Repository {
     fun getAll(): Unit;
 }
 
+// Composite interface
 class SqlCourseRepository : CourseRepository, Repository {
     override var isCoursePersisted: Boolean = false
     override fun getById(id: Int): Course {
