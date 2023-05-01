@@ -13,7 +13,34 @@ fun main() {
     // exploreFilter(courseList, desPredicate)
 
     // exploreMap(courseList) only map
-    exploreMap(courseList, desPredicate) // combine with filter and map
+    // exploreMap(courseList, desPredicate) // combine with filter and map
+
+    exploreHashMap()
+}
+
+fun exploreHashMap() {
+    val nameAgeMutableMap = mutableMapOf("Ikram" to 33, "Jane" to 25)
+    nameAgeMutableMap
+        .forEach { (k, v) ->
+            println("key: $k and the value is $v")
+        }
+
+    // val value = nameAgeMutableMap.get("Ikram")
+    // val value = nameAgeMutableMap["Ikram"]
+    val value = nameAgeMutableMap.getOrElse("Ikram1") {"Hasib"} // If you unsure the value is existed or not. {"Hasib"} is the default value
+    println("The value is $value")
+
+    val result = nameAgeMutableMap.containsKey("abc") // checks the key is exists or not.
+    println("Result is boolean: $result")
+
+    val filterMap = nameAgeMutableMap
+        .filterKeys { it.length < 5 } // filter with key wise
+        .map { it.key.uppercase() }
+    println("filterMap is: $filterMap")
+
+    val maxAge = nameAgeMutableMap
+        .maxByOrNull { it.value } // sorting ascending order
+    println("maxAge is: $maxAge")
 }
 
 //fun exploreMap(courseList: MutableList<Course>) {
