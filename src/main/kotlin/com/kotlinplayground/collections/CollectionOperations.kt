@@ -15,7 +15,22 @@ fun main() {
     // exploreMap(courseList) only map
     // exploreMap(courseList, desPredicate) // combine with filter and map
 
-    exploreHashMap()
+    // exploreHashMap()
+    collectionsNullability()
+}
+
+fun collectionsNullability() {
+    var list: MutableList<String>? = null
+    list = mutableListOf()
+    list.add("Ikram")
+    list.forEach {
+        println("Value is $it")
+    }
+
+    val list1: List<String?> = listOf("Alex", null, "Chloe")
+    list1.forEach {
+        println("Value is ${it?.length}")
+    }
 }
 
 fun exploreHashMap() {
