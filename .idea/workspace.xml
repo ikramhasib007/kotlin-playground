@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f30a30e-4002-45e9-b1aa-46ddc62fd1f8" name="Changes" comment="variables basics">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/kotlinplayground/exceptions/ExploreExceptions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8f30a30e-4002-45e9-b1aa-46ddc62fd1f8" name="Changes" comment="variables basics" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +65,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.ExploreExceptionsKt">
+  <component name="RunManager" selected="Kotlin.CollectionOperationsKt">
     <configuration name="CollectionOperationsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kotlinplayground.collections.CollectionOperationsKt" />
       <module name="kotlin-playground.main" />
@@ -106,8 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.ExploreExceptionsKt" />
         <item itemvalue="Kotlin.CollectionOperationsKt" />
+        <item itemvalue="Kotlin.ExploreExceptionsKt" />
         <item itemvalue="Kotlin.CollectionOperationsUsingSequencesKt" />
         <item itemvalue="Kotlin.ExploreLambdasKt" />
         <item itemvalue="Kotlin.ExploreCollectionsKt" />
