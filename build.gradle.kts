@@ -1,4 +1,6 @@
+import org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 
 plugins {
 	id("org.springframework.boot") version "3.0.6"
@@ -47,4 +49,19 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+sourceSets {
+	test {
+
+		// After gradle 7.1
+		java {
+			setSrcDirs(listOf("src/test/intg", "src/test/unit"))
+		}
+
+		// Before gradle 7.1
+		/*withConvention(KotlinSourceSet::class) {
+			kotlin.setSrcDirs(listOf("src/test/intg", "src/test/unit"))
+		}*/
+	}
 }
