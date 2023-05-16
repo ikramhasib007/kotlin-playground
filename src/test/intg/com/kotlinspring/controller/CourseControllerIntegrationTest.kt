@@ -57,7 +57,7 @@ class CourseControllerIntegrationTest {
             .uri("/v1/courses")
             .exchange()
             .expectStatus().is2xxSuccessful
-            .expectBodyList(CourseDTO::class.java) // Body List data expectation
+            .expectBodyList(CourseDTO::class.java) // Body List data expectation.
             .returnResult()
             .responseBody
 
