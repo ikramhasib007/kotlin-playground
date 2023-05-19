@@ -3,6 +3,7 @@ package com.kotlinspring.controller
 import com.kotlinspring.dto.CourseDTO
 import com.kotlinspring.service.CourseService
 import com.kotlinspring.util.courseDTO
+import com.kotlinspring.util.courseEntityList
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.every
 import org.junit.jupiter.api.Assertions
@@ -42,5 +43,33 @@ class CourseControllerUnitTest {
         Assertions.assertTrue {
             savedCourseDTO!!.id != null
         }
+    }
+
+    @Test
+    fun retrieveAllCourses() {
+        /*
+            val courseDTOs = courseEntityList()
+            .mapIndexed { index, course -> courseDTO(index + 1, course.name, course.category) }
+            every { courseServiceMock.retrieveAllCourses() } returns courseDTOs
+        */
+
+        every { courseServiceMock.retrieveAllCourses() }.returnsMany(
+            listOf(
+                courseDTO(1), courseDTO(2), courseDTO(3)
+            )
+        )
+
+        // Both mocks will works fine
+
+        val allCourseDTOs = webTestClient
+            .get()
+            .uri("/v1/courses")
+            .exchange()
+            .expectStatus().is2xxSuccessful
+            .expectBodyList(CourseDTO::class.java) // Body List data expectation.
+            .returnResult()
+            .responseBody
+
+        Assertions.assertEquals(3, allCourseDTOs!!.size)
     }
 }
