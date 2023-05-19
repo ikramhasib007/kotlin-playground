@@ -26,6 +26,20 @@ class CourseControllerUnitTest {
     lateinit var courseServiceMock: CourseService
 
     @Test
+    fun addCourseValidation() {
+        val courseDTO = CourseDTO(null, "", "")
+
+        every { courseServiceMock.addCourse(any()) } returns courseDTO(id = 1) // mocking the addCourse function
+
+        val savedCourseDTO = webTestClient
+            .post()
+            .uri("/v1/courses")
+            .bodyValue(courseDTO)
+            .exchange()
+            .expectStatus().isBadRequest
+    }
+
+    @Test
     fun addCourse() {
         val courseDTO = CourseDTO(
             null, "Build RESTful APIs with SprintBoot and Kotlin", "SOFTWARE"
