@@ -3,6 +3,7 @@ package com.kotlinspring.controller
 import com.kotlinspring.dto.CourseDTO
 import com.kotlinspring.service.CourseService
 import org.springframework.http.HttpStatus
+import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
@@ -27,4 +28,8 @@ class CourseController(val courseService: CourseService) {
 
     @PutMapping("/{course_id}") // path variable declaration syntax => {path_variable_name}
     fun updateCourse(@RequestBody courseDTO: CourseDTO, @PathVariable("course_id") courseId: Int) = courseService.updateCourse(courseId, courseDTO)
+
+    @DeleteMapping("/{courseId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun deleteCourse(@PathVariable("courseId") courseId: Int) = courseService.deleteCourse(courseId)
 }
