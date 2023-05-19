@@ -1,6 +1,7 @@
 package com.kotlinspring.controller
 
 import com.kotlinspring.dto.CourseDTO
+import com.kotlinspring.entity.Course
 import com.kotlinspring.repository.CourseRepository
 import com.kotlinspring.util.courseEntityList
 import org.junit.jupiter.api.Assertions
@@ -62,5 +63,26 @@ class CourseControllerIntegrationTest {
             .responseBody
 
         assertEquals(3, allCourseDTOs!!.size)
+    }
+
+    @Test
+    fun updateCourse() {
+        // Existing Course
+        val course = Course(null, "Build RESTful APIs using SpringBoot and Kotlin", "Development")
+        courseRepository.save(course)
+        // courseId
+        // Updated CourseDTO
+        val updatedCourseDTO = Course(null, "Build RESTful APIs using SpringBoot and Kotlin-1", "Development")
+        val updatedCourse = webTestClient
+            .put()
+            .uri("/v1/courses/{courseId}", course.id)
+            .bodyValue(updatedCourseDTO)
+            .exchange()
+            .expectStatus().isOk
+            .expectBody(CourseDTO::class.java) // expect body assertion for kotlin. this will handle the type and assertion
+            .returnResult()
+            .responseBody
+
+        assertEquals("Build RESTful APIs using SpringBoot and Kotlin-1", updatedCourse!!.name)
     }
 }
