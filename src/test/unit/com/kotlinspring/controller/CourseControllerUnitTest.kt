@@ -7,6 +7,8 @@ import com.kotlinspring.util.courseDTO
 import com.kotlinspring.util.courseEntityList
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.every
+import io.mockk.just
+import io.mockk.runs
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -54,7 +56,7 @@ class CourseControllerUnitTest {
             every { courseServiceMock.retrieveAllCourses() } returns courseDTOs
         */
 
-        every { courseServiceMock.retrieveAllCourses() }.returnsMany(
+        every { courseServiceMock.retrieveAllCourses() }.returnsMany( // return list
             listOf(
                 courseDTO(1), courseDTO(2), courseDTO(3)
             )
@@ -93,5 +95,17 @@ class CourseControllerUnitTest {
             .responseBody
 
         Assertions.assertEquals("Build RESTful APIs using SpringBoot and Kotlin-1", updatedCourse!!.name)
+    }
+
+    @Test
+    fun deleteCourse() {
+
+        every { courseServiceMock.deleteCourse(any()) } just runs // If any function return nothing/void then mock that function like this
+
+        val updatedCourse = webTestClient
+            .delete()
+            .uri("/v1/courses/{courseId}", 10)
+            .exchange()
+            .expectStatus().isNoContent
     }
 }
