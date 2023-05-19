@@ -8,6 +8,6 @@ data class Course(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) // auto generated id
     val id : Int?,
-    val name : String,
-    val category : String
+    var name : String,
+    var category : String
 )
