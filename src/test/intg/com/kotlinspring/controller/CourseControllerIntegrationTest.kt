@@ -34,7 +34,7 @@ class CourseControllerIntegrationTest {
     @Test
     fun addCourse() {
         val courseDTO = CourseDTO(
-            null, "Build RESTful APIs with Sprintboot and Kotlin", "SOFTWARE"
+            null, "Build RESTful APIs with SprintBoot and Kotlin", "SOFTWARE"
         )
         val savedCourseDTO = webTestClient
             .post()

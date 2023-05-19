@@ -30,7 +30,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 
 	//logging
-	implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
+	implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
 
 	//db
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -39,8 +39,8 @@ dependencies {
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-webflux")
-	testImplementation("io.mockk:mockk:1.10.4")
-	testImplementation("com.ninja-squad:springmockk:3.0.1")
+	testImplementation("io.mockk:mockk:1.13.5")
+	testImplementation("com.ninja-squad:springmockk:4.0.2")
 }
 
 tasks.withType<KotlinCompile> {
