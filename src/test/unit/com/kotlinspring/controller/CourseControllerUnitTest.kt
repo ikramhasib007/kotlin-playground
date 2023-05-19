@@ -1,6 +1,7 @@
 package com.kotlinspring.controller
 
 import com.kotlinspring.dto.CourseDTO
+import com.kotlinspring.entity.Course
 import com.kotlinspring.service.CourseService
 import com.kotlinspring.util.courseDTO
 import com.kotlinspring.util.courseEntityList
@@ -59,7 +60,7 @@ class CourseControllerUnitTest {
             )
         )
 
-        // Both mocks will works fine
+        // Both mock will works fine
 
         val allCourseDTOs = webTestClient
             .get()
@@ -71,5 +72,26 @@ class CourseControllerUnitTest {
             .responseBody
 
         Assertions.assertEquals(3, allCourseDTOs!!.size)
+    }
+
+    @Test
+    fun updateCourse() {
+        val courseId = 10
+        every { courseServiceMock.updateCourse(any(), any()) } returns courseDTO(courseId, "Build RESTful APIs using SpringBoot and Kotlin-1")
+
+        // Updated CourseDTO
+        val updatedCourseDTO = Course(null, "Build RESTful APIs using SpringBoot and Kotlin-1", "Development")
+
+        val updatedCourse = webTestClient
+            .put()
+            .uri("/v1/courses/{courseId}", courseId)
+            .bodyValue(updatedCourseDTO)
+            .exchange()
+            .expectStatus().isOk
+            .expectBody(CourseDTO::class.java) // expect body assertion for kotlin. this will handle the type and assertion
+            .returnResult()
+            .responseBody
+
+        Assertions.assertEquals("Build RESTful APIs using SpringBoot and Kotlin-1", updatedCourse!!.name)
     }
 }
