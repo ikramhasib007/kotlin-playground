@@ -47,6 +47,28 @@ class CourseControllerUnitTest {
     }
 
     @Test
+    fun addCourseRuntimeException() {
+        val courseDTO = CourseDTO(
+            null, "Build RESTful APIs with SprintBoot and Kotlin", "SOFTWARE"
+        )
+
+        val errorMessage = "Unexpected error occurred"
+        every { courseServiceMock.addCourse(any()) } throws RuntimeException(errorMessage)
+
+        val response = webTestClient
+            .post()
+            .uri("/v1/courses")
+            .bodyValue(courseDTO)
+            .exchange()
+            .expectStatus().is5xxServerError
+            .expectBody(String::class.java)
+            .returnResult()
+            .responseBody
+
+        assertEquals(errorMessage, response)
+    }
+
+    @Test
     fun addCourse() {
         val courseDTO = CourseDTO(
             null, "Build RESTful APIs with SprintBoot and Kotlin", "SOFTWARE"
