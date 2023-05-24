@@ -13,6 +13,7 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.reactive.server.WebTestClient
+import org.springframework.web.util.UriComponentsBuilder
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
@@ -63,6 +64,24 @@ class CourseControllerIntegrationTest {
             .responseBody
 
         assertEquals(3, allCourseDTOs!!.size)
+    }
+
+    @Test
+    fun retrieveAllCourses_ByName() {
+        val uri = UriComponentsBuilder.fromUriString("/v1/courses")
+            .queryParam("course_name", "SpringBoot")
+            .toUriString()
+
+        val allCourseDTOs = webTestClient
+            .get()
+            .uri(uri)
+            .exchange()
+            .expectStatus().is2xxSuccessful
+            .expectBodyList(CourseDTO::class.java) // Body List data expectation.
+            .returnResult()
+            .responseBody
+
+        assertEquals(2, allCourseDTOs!!.size)
     }
 
     @Test

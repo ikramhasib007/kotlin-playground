@@ -99,7 +99,7 @@ class CourseControllerUnitTest {
             every { courseServiceMock.retrieveAllCourses() } returns courseDTOs
         */
 
-        every { courseServiceMock.retrieveAllCourses() }.returnsMany( // return list
+        every { courseServiceMock.retrieveAllCourses(any()) }.returnsMany( // return list
             listOf(
                 courseDTO(1), courseDTO(2), courseDTO(3)
             )
