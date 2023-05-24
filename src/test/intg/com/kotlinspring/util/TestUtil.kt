@@ -1,6 +1,7 @@
 package com.kotlinspring.util
 
 import com.kotlinspring.dto.CourseDTO
+import com.kotlinspring.dto.InstructorDTO
 import com.kotlinspring.entity.Course
 
 fun courseEntityList() = listOf<Course>(
@@ -20,3 +21,8 @@ fun courseDTO(
     category,
     //instructorId
 )
+
+fun instructorDTO(
+    id: Int? = null,
+    name: String = "Ikram Ud Daula",
+) = InstructorDTO(id, name)
