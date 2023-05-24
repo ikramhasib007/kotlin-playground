@@ -21,9 +21,17 @@ class CourseRepositoryIntegrationTest {
         courseRepository.deleteAll()
         courseRepository.saveAll(courseEntityList())
     }
+
     @Test
     fun findByNameContaining() {
         val courses = courseRepository.findByNameContaining("SpringBoot")
+        println("courses: $courses")
+        assertEquals(2, courses.size)
+    }
+
+    @Test
+    fun findCourseByName() {
+        val courses = courseRepository.findCourseByName("SpringBoot")
         println("courses: $courses")
         assertEquals(2, courses.size)
     }
