@@ -13,4 +13,8 @@ data class Course(
     @ManyToOne(fetch = FetchType.LAZY) // EAGER | LAZY
     @JoinColumn(name = "instructor_id", nullable = false) // When database table is created then the id will add for pointing the relationship.
     val instructor: Instructor? = null
-)
+) {
+    override fun toString(): String {
+        return "Course(id=$id, name=$name, category: $category, instructor=${instructor!!.id})"
+    }
+}

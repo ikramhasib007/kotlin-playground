@@ -3,6 +3,7 @@ package com.kotlinspring.controller
 import com.kotlinspring.dto.CourseDTO
 import com.kotlinspring.entity.Course
 import com.kotlinspring.repository.CourseRepository
+import com.kotlinspring.repository.InstructorRepository
 import com.kotlinspring.util.courseEntityList
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -25,17 +26,21 @@ class CourseControllerIntegrationTest {
     @Autowired
     lateinit var courseRepository: CourseRepository
 
+    @Autowired
+    lateinit var instructorRepository: InstructorRepository
+
     @BeforeEach
     fun setUp() {
 
         courseRepository.deleteAll()
         courseRepository.saveAll(courseEntityList())
+        instructorRepository.deleteAll()
     }
 
     @Test
     fun addCourse() {
         val courseDTO = CourseDTO(
-            null, "Build RESTful APIs with SprintBoot and Kotlin", "SOFTWARE"
+            null, "Build RESTful APIs with SprintBoot and Kotlin", "SOFTWARE",
         )
         val savedCourseDTO = webTestClient
             .post()
@@ -46,7 +51,7 @@ class CourseControllerIntegrationTest {
             .expectBody(CourseDTO::class.java) // expect body assertion for kotlin. this will handle the type and assertion
             .returnResult()
             .responseBody
-        // println(savedCourseDTO)
+         println("Yes, ********* $savedCourseDTO")
         Assertions.assertTrue {
             savedCourseDTO!!.id != null
         }
