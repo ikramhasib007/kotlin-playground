@@ -5,6 +5,7 @@ import com.kotlinspring.entity.Course
 import com.kotlinspring.repository.CourseRepository
 import com.kotlinspring.repository.InstructorRepository
 import com.kotlinspring.util.courseEntityList
+import com.kotlinspring.util.instructorEntity
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
@@ -32,15 +33,19 @@ class CourseControllerIntegrationTest {
     @BeforeEach
     fun setUp() {
 
-        courseRepository.deleteAll()
-        courseRepository.saveAll(courseEntityList())
         instructorRepository.deleteAll()
+        courseRepository.deleteAll()
+        val instructor = instructorEntity()
+        instructorRepository.save(instructor)
+        courseRepository.saveAll(courseEntityList(instructor))
     }
 
     @Test
     fun addCourse() {
+        val instructor = instructorRepository.findAll().first()
+
         val courseDTO = CourseDTO(
-            null, "Build RESTful APIs with SprintBoot and Kotlin", "SOFTWARE",
+            null, "Build RESTful APIs with SprintBoot and Kotlin", "SOFTWARE", instructor.id
         )
         val savedCourseDTO = webTestClient
             .post()
@@ -51,7 +56,6 @@ class CourseControllerIntegrationTest {
             .expectBody(CourseDTO::class.java) // expect body assertion for kotlin. this will handle the type and assertion
             .returnResult()
             .responseBody
-         println("Yes, ********* $savedCourseDTO")
         Assertions.assertTrue {
             savedCourseDTO!!.id != null
         }
@@ -91,12 +95,15 @@ class CourseControllerIntegrationTest {
 
     @Test
     fun updateCourse() {
+        val instructor = instructorRepository.findAll().first()
+
         // Existing Course
-        val course = Course(null, "Build RESTful APIs using SpringBoot and Kotlin", "Development")
+        val course = Course(null, "Build RESTful APIs using SpringBoot and Kotlin", "Development", instructor)
         courseRepository.save(course)
+
         // courseId
         // Updated CourseDTO
-        val updatedCourseDTO = Course(null, "Build RESTful APIs using SpringBoot and Kotlin-1", "Development")
+        val updatedCourseDTO = CourseDTO(null, "Build RESTful APIs using SpringBoot and Kotlin-1", "Development", course.instructor!!.id)
         val updatedCourse = webTestClient
             .put()
             .uri("/v1/courses/{courseId}", course.id)
@@ -112,8 +119,10 @@ class CourseControllerIntegrationTest {
 
     @Test
     fun deleteCourse() {
+        val instructor = instructorRepository.findAll().first()
+
         // Existing Course
-        val course = Course(null, "Build RESTful APIs using SpringBoot and Kotlin", "Development")
+        val course = Course(null, "Build RESTful APIs using SpringBoot and Kotlin", "Development", instructor)
         courseRepository.save(course)
 
         val updatedCourse = webTestClient
